@@ -1,0 +1,68 @@
+<script type="text/javascript">
+	/*
+		made by hi098123 : https://github.com/hi098123
+	*/
+	function A(el) {
+		var len=document.getElementsByClassName('hides').length;
+		for (var i = 0; i < len; i++) {
+			document.getElementsByClassName('hides')[i].style.display='none';
+		}
+		el.nextSibling.nextSibling.style.display='block';
+	}
+</script>
+<style type="text/css">
+	.qnadiv .hides{
+		display: none;
+		line-height:2.3em;
+	}
+	.qnadiv div{
+		width: 100%;
+		border: 1px dotted #111;
+		margin-bottom: 20px;
+		font-weight: bolder;
+		cursor: pointer;
+	}
+	.qnadiv span{
+		font-size: 22px;
+		display: block;
+	}
+	.qnadiv a{
+		color: #000;
+	}
+	.qnadiv .hides:before{
+		content: 'A ';
+		color: #c2c;
+		font-weight: bold;
+		font-size: 36px;
+	}
+	.qnadiv .question,.qnadiv .hides{
+		padding: 10px 20px;
+	}
+	.qnadiv .question:before{
+		content: 'Q ';
+		color: #cc2;
+		font-weight: bold;
+		font-size: 36px;
+	}
+</style>
+<div class="qnadiv">
+	<div>
+		<span class="question" onclick="A(this)">how can i use git?</span>
+		<span class="hides">
+			first answer
+		</span>
+	</div>
+	<div>
+		<span class="question" onclick="A(this)">How can i use html</span>
+		<span class="hides">
+			&lt;html&gt;
+			&lt;/html&gt;
+		</span>
+	</div>
+	<div>
+		<span class="question" onclick="A(this)">How can i use Google search</span>
+		<span class="hides">
+			Go <a href="https://google.com" target="_blank">google.com</a> and write text what you want search and press enter
+		</span>
+	</div>
+</div>
